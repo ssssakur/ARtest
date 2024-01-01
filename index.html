@@ -8,6 +8,9 @@
             body{
                 text-align: center;
             }
+            .flex{
+                display: flex;
+            }
             .text1{
                 text-align: center;
                 font-family:"Yu Gothic Medium", "游ゴシック Medium", "ヒラギノ角ゴ ProN", "HiraKakuProN", sans-serif;
@@ -15,6 +18,16 @@
             .text2{
                 text-align: right;
                 font-family:"Yu Gothic Medium", "游ゴシック Medium", "ヒラギノ角ゴ ProN", "HiraKakuProN", sans-serif;
+            }
+            .model{
+                width:50%
+                hight:80%
+            }
+            @media screen and(max-width: 960px) {
+                .model{
+                width:90%
+                hight:50%
+            }
             }
         </style>
     </head>
@@ -26,40 +39,43 @@
             右下の四角いマークを押すとARになります<br>
             （スマートフォンのみ）
         </div>
-        
-        <div class="text1">
-            <br>--さつき--<br>
+        <div class="flex">
+            <div class="text1 model">
+                <br>--さつき作--<br>
+                <model-viewer
+                  ar
+                  ar-modes="scene-viewer webxr quick-look"
+                  src="./ryuu.glb"
+                  
+                  alt="ryuu"
+                  style="width:100%;height:90%;"                  
+                  background-color="#70BCD1"
+                  shadow-intensity="1"
+                  autoplay
+                  auto-rotate
+                  camera-controls
+                ></model-viewer>
+                <br>
+            </div>
+            <div class="text1 model">
+                <br>--あいり作--<br>
+            
+            <model-viewer
+              ar
+              ar-modes="scene-viewer webxr quick-look"
+              src="./ryuu_imo.gltf"
+              
+              alt="ryuu"
+              style="width:100%;height:90%;"
+              background-color="#70BCD1"
+              shadow-intensity="1"
+              autoplay
+              auto-rotate
+              camera-controls
+            ></model-viewer>
+            </div>
+            <br>
         </div>
-        <model-viewer
-          ar
-          ar-modes="scene-viewer webxr quick-look"
-          src="./ryuu.glb"
-          
-          alt="usagi"
-          style="width:100%;height:90%;"                  
-          background-color="#70BCD1"
-          shadow-intensity="1"
-          autoplay
-          auto-rotate
-          camera-controls
-        ></model-viewer>
-        <div class="text1">
-            <br>--あいり--<br>
-        </div>
-        <model-viewer
-          ar
-          ar-modes="scene-viewer webxr quick-look"
-          src="./ryuu_imo.gltf"
-          
-          alt="usagi"
-          style="width:100%;height:90%;"                  
-          background-color="#70BCD1"
-          shadow-intensity="1"
-          autoplay
-          auto-rotate
-          camera-controls
-        ></model-viewer>
-        
         
         
     </body>
